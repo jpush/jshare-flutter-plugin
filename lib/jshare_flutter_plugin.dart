@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -7,10 +6,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-//import 'package:path_provider/path_provider.dart';
-
 class JShare {
-  final String flutter_log = "| JSHARE | Flutter | ";
+  final String flutterLog = "| JSHARE | Flutter | ";
 
   final MethodChannel _channel;
   factory JShare() => _instance;
@@ -23,10 +20,10 @@ class JShare {
 
   /// 初始化
   void setup({@required JShareConfig config}) {
-    print(flutter_log + "setup：");
+    print(flutterLog + "setup：");
 
     if (config.appKey == null) {
-      print(flutter_log + "JIGUANG appkey can not be null");
+      print(flutterLog + "JIGUANG appkey can not be null");
       return;
     }
     Map map = config.toJsonMap();
@@ -35,7 +32,7 @@ class JShare {
 
   /// 分享，
   Future<JShareResponse> shareMessage({@required JShareMessage message}) async {
-    print(flutter_log + "shareMessage：" + message.toJsonMap().toString());
+    print(flutterLog + "shareMessage：" + message.toJsonMap().toString());
 
     Map map = message.toJsonMap();
     Map resultMap = await _channel.invokeMapMethod("shareMessage",map);
@@ -46,7 +43,7 @@ class JShare {
 
   /// 授权
   Future<JShareSocial> authorize({@required JSharePlatform platform}) async {
-    print(flutter_log + "authorize：");
+    print(flutterLog + "authorize：");
 
     Map map = Map();
     map["platform"] = getStringFromEnum(platform);
@@ -54,14 +51,14 @@ class JShare {
 
     JShareSocial social = JShareSocial.fromJson(resultMap);
 
-    print(flutter_log + "authorize callback：" + social.toJsonMap().toString());
+    print(flutterLog + "authorize callback：" + social.toJsonMap().toString());
 
     return social;
   }
 
   /// 判断是否授权
   Future<JShareResponse> isPlatformAuth({@required JSharePlatform platform}) async {
-    print(flutter_log + "isPlatformAuth：");
+    print(flutterLog + "isPlatformAuth：");
 
     Map map = Map();
     map["platform"] = getStringFromEnum(platform);
@@ -73,7 +70,7 @@ class JShare {
 
   /// 取消授权
   Future<JShareResponse> cancelPlatformAuth({@required JSharePlatform platform}) async {
-    print(flutter_log + "cancelPlatformAuth：");
+    print(flutterLog + "cancelPlatformAuth：");
 
     Map map = Map();
     map["platform"] = getStringFromEnum(platform);
@@ -85,20 +82,20 @@ class JShare {
 
   /// 获取个人信息
   Future<JShareUserInfo> getUserInfo({@required JSharePlatform platform}) async {
-    print(flutter_log + "getUserInfo：");
+    print(flutterLog + "getUserInfo：");
 
     Map map = Map();
     map["platform"] = getStringFromEnum(platform);
     Map resultMap = await _channel.invokeMapMethod("getUserInfo",map);
     JShareUserInfo userInfo = JShareUserInfo.fromJson(resultMap);
 
-    print(flutter_log + "getUserInfo callback：" + userInfo.toJsonMap().toString());
+    print(flutterLog + "getUserInfo callback：" + userInfo.toJsonMap().toString());
     return userInfo;
   }
 
   /// 判断某平台分享是否有效
   Future<bool> isClientValid({@required JSharePlatform platform}) async {
-    print(flutter_log + "isClientValid：");
+    print(flutterLog + "isClientValid：");
 
     Map map = Map();
     map["platform"] = getStringFromEnum(platform);

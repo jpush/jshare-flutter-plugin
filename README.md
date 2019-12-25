@@ -1,5 +1,5 @@
 # jshare-flutter-plugin
-JShare's officially supported Flutter plugin (Android &amp; iOS). 极光分享官方支持的 Flutter 插件（Android &amp; iOS）。
+JIGUANG officially supported JShare SDK Flutter plugin (Android &amp; iOS). 极光分享官方支持的 Flutter 插件（Android &amp; iOS）。
 
 
 ### 一、安装
@@ -10,7 +10,7 @@ JShare's officially supported Flutter plugin (Android &amp; iOS). 极光分享�
 
 ``` 
 dependencies:
-  jverify:
+  jshare_flutter_plugin:
     git:
       url: git://github.com/jpush/jshare-flutter-plugin.git
       ref: master
@@ -20,7 +20,7 @@ dependencies:
 
 ```
 dependencies:
-  jshare_flutter_plugin: 1.0.0
+  jshare_flutter_plugin: 1.0.1
 ```
 
 ### 二、配置
