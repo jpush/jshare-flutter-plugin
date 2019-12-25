@@ -1,0 +1,39 @@
+PODS:
+  - Flutter (1.0.0)
+  - JCore (2.1.6)
+  - JShare (1.8.0):
+    - JCore (< 3.0.0, >= 1.2.0)
+  - jshare_flutter_plugin (0.0.1):
+    - Flutter
+    - JShare
+  - path_provider (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - jshare_flutter_plugin (from `.symlinks/plugins/jshare_flutter_plugin/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+
+SPEC REPOS:
+  trunk:
+    - JCore
+    - JShare
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  jshare_flutter_plugin:
+    :path: ".symlinks/plugins/jshare_flutter_plugin/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  JCore: daebd39538328db0cdcad6c4ed101815c42f84bf
+  JShare: 82b171b4cf0c46738d534ca0ce47046eb737093a
+  jshare_flutter_plugin: 2f19b0e19964a487e44e88db4fb69162ef42dce2
+  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+
+PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932
+
+COCOAPODS: 1.8.4
