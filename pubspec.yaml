@@ -1,6 +1,6 @@
 name: jshare_flutter_plugin
-description: JShare SDK Flutter plugin.
-version: 1.0.0
+description: JIGUANG officially supported JShare SDK Flutter plugin (Android &amp; iOS). 极光分享官方支持的 Flutter 插件（Android &amp; iOS）.
+version: 1.0.1
 author: xudong.rao@outlook.com
 homepage: https://www.jiguang.cn
 
