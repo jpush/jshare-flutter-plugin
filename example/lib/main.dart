@@ -72,7 +72,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initPlatformState() async {
-    JShareConfig shareConfig = new JShareConfig(appKey: "ef4be2a0dec95dfd22402d45");
+
+    JShareConfig shareConfig = new JShareConfig(appKey: null);/// 填写自己应用的极光 AppKey
+
     shareConfig.channel = "channel";
     shareConfig.isDebug = true;
     shareConfig.isAdvertisinId = true;
