@@ -1,0 +1,45 @@
+group 'cn.jiguang.jshare_flutter_plugin'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation 'cn.jiguang.sdk:jshare:1.8.0'  // 此处以JShare 1.6.0 版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jshare-qqmodel:1.8.0'  // 此处以jshare-qqmodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
+    api 'cn.jiguang.sdk:jshare-wechatmodel:1.8.0'  // 此处以jshare-wechatmodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jshare-sinamodel:1.8.0'  // 此处以jshare-sinamodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jshare-facebookmodel:1.8.0'  // 此处以jshare-facebookmodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jshare-twittermodel:1.8.0'  // 此处以jshare-twittermodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jcore:2.2.4'  // 此处以JCore 1.2.3版本为例，具体版本请参考压缩包libs的jar包版本。
+
+}
