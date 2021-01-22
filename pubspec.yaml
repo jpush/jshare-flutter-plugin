@@ -1,13 +1,14 @@
 name: jshare_flutter_plugin
 description: JIGUANG officially supported JShare SDK Flutter plugin (Android &amp; iOS). 极光分享官方支持的 Flutter 插件（Android &amp; iOS）.
 version: 1.0.3
-author: xudong.rao@outlook.com
 homepage: https://www.jiguang.cn
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.10.0"
 
 dependencies:
+  platform: ^2.0.0
   flutter:
     sdk: flutter
 
@@ -20,13 +21,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-  # This section identifies this Flutter project as a plugin project.
-  # The androidPackage and pluginClass identifiers should not ordinarily
-  # be modified. They are used by the tooling to maintain consistency when
-  # adding or updating assets for this project.
   plugin:
-    androidPackage: cn.jiguang.jshare_flutter_plugin
-    pluginClass: JshareFlutterPlugin
+    platforms:
+      android:
+        package: cn.jiguang.jshare_flutter_plugin
+        pluginClass: JshareFlutterPlugin
+      ios:
+        pluginClass: JshareFlutterPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

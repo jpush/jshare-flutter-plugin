@@ -74,6 +74,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "platform",
+      "rootUri": "file:///Applications/flutter/.pub-cache/hosted/pub.flutter-io.cn/platform-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "1.24"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Applications/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -134,7 +140,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-01-22T08:52:41.862314Z",
+  "generated": "2021-01-22T09:16:30.981484Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }
