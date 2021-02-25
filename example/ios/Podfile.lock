@@ -1,7 +1,7 @@
 PODS:
   - Flutter (1.0.0)
   - JCore (2.4.0)
-  - JShare (1.9.0):
+  - JShare (1.9.1):
     - JCore (< 3.0.0, >= 1.2.0)
   - jshare_flutter_plugin (0.0.1):
     - Flutter
@@ -30,8 +30,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   JCore: a29e4b0ee54e1301446dc02d8e1c350404108b34
-  JShare: b78807ef0739149695a5e17a208522f632936656
-  jshare_flutter_plugin: 2f19b0e19964a487e44e88db4fb69162ef42dce2
+  JShare: f8af6e61c9f56645735d3c96aa60ce7766762eb5
+  jshare_flutter_plugin: 89b748afa0ab48e319082a897ed08c484194d830
   path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
 
 PODFILE CHECKSUM: 7fb83752f59ead6285236625b82473f90b1cb932

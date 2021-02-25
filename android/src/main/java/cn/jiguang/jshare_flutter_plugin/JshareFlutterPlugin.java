@@ -242,7 +242,7 @@ public class JshareFlutterPlugin implements MethodCallHandler {
         Log.d(TAG,"Action - shareMessage - onError" );
         // 分享失败
         final Map<String,Object> map = new HashMap<>();
-        map.put(j_code_key,errorCode);
+        map.put(j_code_key,String.valueOf(errorCode));
         map.put(j_msg_key,"分享失败");
         runMainThread(map, result);
       }
@@ -313,7 +313,7 @@ public class JshareFlutterPlugin implements MethodCallHandler {
           toastMsg = "授权失败";
         }
         final Map<String,Object> map = new HashMap<>();
-        map.put(j_code_key,errorCode);
+        map.put(j_code_key,String.valueOf(errorCode));
         map.put(j_msg_key,toastMsg);
 
         runMainThread(map, result);
@@ -378,7 +378,7 @@ public class JshareFlutterPlugin implements MethodCallHandler {
         }
 
         final Map<String,Object> map = new HashMap<>();
-        map.put(j_code_key,errorCode);
+        map.put(j_code_key,String.valueOf(errorCode));
         map.put(j_msg_key,toastMsg);
 
         runMainThread(map, result);
@@ -446,7 +446,7 @@ public class JshareFlutterPlugin implements MethodCallHandler {
           toastMsg = "获取个人信息失败";
         }
         final Map<String,Object> map = new HashMap<>();
-        map.put(j_code_key,errorCode);
+        map.put(j_code_key,String.valueOf(errorCode));
         map.put(j_msg_key,toastMsg);
         runMainThread(map, result);
       }

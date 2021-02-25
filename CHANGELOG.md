@@ -1,3 +1,5 @@
+## 1.0.5
++ bug fix
 ## 1.0.3
 + ios 新增universal link
 ## 1.0.2
