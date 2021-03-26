@@ -20,7 +20,7 @@ dependencies:
 
 ```
 dependencies:
-  jshare_flutter_plugin: 1.0.5
+  jshare_flutter_plugin: 2.0.1
 ```
 
 ### 二、配置
