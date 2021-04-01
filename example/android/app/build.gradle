@@ -38,7 +38,6 @@ android {
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk {
             //选择要添加的对应 cpu 类型的 .so 库。
@@ -54,9 +53,6 @@ android {
                 FACEBOOK_APPID : "facebook appid",//facebook注册应用得到的appId
         ]
     }
-    packagingOptions {
-        exclude 'META-INF/proguard/androidx-annotations.pro'
-    }
 
     signingConfigs {
         //应用的包名、应用的签名、第三方平台注册的AppID及Appkey三者要一一对应，否则会无法分享
@@ -69,11 +65,14 @@ android {
     }
     buildTypes {
         release {
+            shrinkResources false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             signingConfig signingConfigs.debug
         }
         debug {
+            shrinkResources false
+            minifyEnabled false
             signingConfig signingConfigs.debug
         }
     }
@@ -81,10 +80,4 @@ android {
 
 flutter {
     source '../..'
-}
-
-dependencies {
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
