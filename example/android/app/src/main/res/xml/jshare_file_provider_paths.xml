@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--自定义配置分享文件目录访问权限-->
+    <external-path name="sample-external-path" path="/"/>
+    <files-path name="sample-files-path" path="/"/>
+</paths>
