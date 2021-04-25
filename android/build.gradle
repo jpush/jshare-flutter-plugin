@@ -3,6 +3,7 @@ version '1.0'
 
 buildscript {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -14,6 +15,7 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
@@ -40,6 +42,6 @@ dependencies {
     implementation 'cn.jiguang.sdk:jshare-sinamodel:2.0.0'  // 此处以jshare-sinamodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
     implementation 'cn.jiguang.sdk:jshare-facebookmodel:2.0.0'  // 此处以jshare-facebookmodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
     implementation 'cn.jiguang.sdk:jshare-twittermodel:2.0.0'  // 此处以jshare-twittermodel 1.6.0  版本为例，具体版本请参考压缩包libs的jar包版本。
-    implementation 'cn.jiguang.sdk:jcore:2.6.0'  // 此处以JCore 1.2.3版本为例，具体版本请参考压缩包libs的jar包版本。
+    implementation 'cn.jiguang.sdk:jcore:2.7.8'  // 此处以JCore 1.2.3版本为例，具体版本请参考压缩包libs的jar包版本。
 
 }
