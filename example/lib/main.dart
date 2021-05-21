@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
   String _resultString = "显示结果";
 
   JShare jShare = new JShare();
-  JShareType shareType;
+  JShareType? shareType;
 
   @override
   void initState() {
@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
 
-    JShareConfig shareConfig = new JShareConfig(appKey: null);/// 填写自己应用的极光 AppKey
+    JShareConfig shareConfig = new JShareConfig(appKey: "");/// 填写自己应用的极光 AppKey
 
     shareConfig.channel = "channel";
     shareConfig.isDebug = true;
@@ -280,7 +280,7 @@ class _MyAppState extends State<MyApp> {
   }
 
 
-  Widget _showSheet(BuildContext context, JShareType type) {
+  Widget? _showSheet(BuildContext context, JShareType type) {
     shareType = type;
     showModalBottomSheet(
         context: context,
@@ -349,7 +349,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   /// 选择摸个平台分享
-  void _didSelectPlatform({@required int index}) async {
+  void _didSelectPlatform({required int index}) async {
     print("Action - didSelectPlatform:  " +
         "platfrom = " +
         platfromList[index].toString());
@@ -360,7 +360,7 @@ class _MyAppState extends State<MyApp> {
 
     if (message.platform != JSharePlatform.sinaWeibo) {
       // 新浪可以支持网页分享
-      bool isValid = await jShare.isClientValid(platform: message.platform);
+      bool isValid = await jShare.isClientValid(platform: message.platform!);
       if (isValid == false) {
         print("is not available platfrom (" +
             platfromList[index].toString() +
@@ -491,7 +491,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   /// TEST : 获取文件路径
-  String _getFilePath(Directory directory, String name){
+  String? _getFilePath(Directory directory, String name){
     print("Action - _getFilePath:");
     final File file = File('${directory.path}/$name');
     if (!file.existsSync()) {
@@ -516,8 +516,8 @@ class _MyAppState extends State<MyApp> {
 
 /// 封装 按钮
 class CustomButton extends StatelessWidget {
-  final VoidCallback onPressed;
-  final String title;
+  final VoidCallback? onPressed;
+  final String? title;
 
   const CustomButton({@required this.onPressed, this.title});
 
