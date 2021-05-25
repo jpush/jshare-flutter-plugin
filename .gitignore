@@ -5,5 +5,9 @@
 .pub/
 
 build/
-.idea
+.idea/
 .metadata
+
+pubspec.lock
+example/pubspec.lock
+example/.flutter-plugins-dependencies
